@@ -1,0 +1,17 @@
+<!-- <header>
+    <input type="button" value="+ Add Department" [routerLink]="['/department/add']" class="btn">
+  </header>
+   -->
+  <table class="table table-hover">
+      <thead>
+        <th>Name</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of departments">
+          
+          <td>{{item.Name}}</td>   
+          <input type="button" value="Edit" [routerLink]="['/department/update', item.id]"x class="btn">       
+          <input type="button" value="Delete" (click)="onDelete(item.id)"x class="btn"> 
+        </tr>
+      </tbody>
+    </table>

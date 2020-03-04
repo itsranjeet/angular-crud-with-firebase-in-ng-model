@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row" style="margin-top: 25px;">
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="studentName" >
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="studentAge" >
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="studentAddress" >
+      </div>
+      
+        <div class="col-md-3">
+            <select [(ngModel)]="DepartmentId">
+              <option>choose Department</option>
+              <option *ngFor="let item of departments" >{{item.Name}}</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+        <button
+         type="button" (click)="EditRecord()" [disabled]="!studentName || !studentAge || !studentAddress" class="btn btn-primary">
+          Update </button> 
+      </div>
+    </div>
+  </div>
+  
+

@@ -1,0 +1,29 @@
+<div class="container">
+ 
+  <h1 style="margin-top: 25px;">
+    {{title}}
+  </h1>
+ 
+  <div class="row" style="margin-top: 25px;">
+    <div class="col-md-3">
+      <input type="text" class="form-control" [(ngModel)]="studentName" placeholder="Name">
+    </div>
+    <div class="col-md-3">
+      <input type="text" class="form-control" [(ngModel)]="studentAge" placeholder="Age">
+    </div>
+    <div class="col-md-3">
+      <input type="text" class="form-control" [(ngModel)]="studentAddress" placeholder="Address">
+    </div>
+    <div class="col-md-3">
+      <select [(ngModel)]="DepartmentId">
+        <option>choose Department</option>
+        <option *ngFor="let item of departments" value="{{item.id}}">{{item.Name}}</option>
+      </select>
+  </div>
+
+    <div class="col-md-3">
+      <button type="button" (click)="CreateRecord()" [disabled]="!studentName || !studentAge || !studentAddress" class="btn btn-primary">+
+        Create Student</button>
+    </div>
+  </div>
+  

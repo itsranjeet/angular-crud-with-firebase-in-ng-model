@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 style="margin-top: 25px;">
+      {{title}}
+    </h1>
+   
+    <div class="column" style="margin-top: 25px;">
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="DepartmentName" placeholder="Name" required>
+      </div>
+      <div class="col-md-3">
+        <button type="button" (click)="EditRecord()"  class="btn btn-primary">update</button>
+      </div>
+    </div>
+</div>
+
